@@ -46,7 +46,7 @@ pack.addFormula({
 	if(key.indexOf('://') !== -1) key = ket.split('/').pop();
 	let requestParams = {
 	  method: "GET",
-	  url: `http://${orgName}.youtrack.cloud/api/issues/${key}?fields=${fields}`,
+	  url: `https://${orgName}.youtrack.cloud/api/issues/${key}?fields=${fields}`,
 	  headers : {  'Authorization': `Bearer perm:${token}` }
 	};
 	let response = await context.fetcher.fetch(requestParams);
